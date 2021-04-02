@@ -1,0 +1,18 @@
+{
+    "name": "sendsms/sendsms",
+    "description": "Use our SMS shipping solution to deliver the right information at the right time.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Radu Vasile Catalin",
+            "email": "catalin@sendsms.ro"
+        }
+    ],
+    "homepage": "https://github.com/sendSMS-RO/sendsms-composer",
+    "keywords": ["Sendsms", "sendsms", "sms", "sendsms-ro"],
+    "autoload": {
+        "psr-4": {
+            "SendSMS\\": "src/"
+        }
+    }
+}
