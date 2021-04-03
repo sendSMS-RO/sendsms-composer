@@ -83,6 +83,8 @@ class Batch extends ApiCommunication
                 $url .= "&start_time=" . urlencode($start_time);
             }
 
+            $this->debug($url);
+            $this->debug($data);
             curl_setopt($this->curl, CURLOPT_HEADER, 1);
             curl_setopt($this->curl, CURLOPT_URL, $url);
             curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, 1);

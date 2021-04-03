@@ -41,6 +41,8 @@ class ApiCommunication
 
             $url .= "?action=execute_multiple";
 
+            $this->debug($url);
+            $this->debug("data=" . urlencode(json_encode($this->queuedActions)));
             curl_setopt($this->curl, CURLOPT_HEADER, 1);
             curl_setopt($this->curl, CURLOPT_URL, $url);
             curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, 1);
@@ -73,6 +75,7 @@ class ApiCommunication
                 curl_close($this->curl);
                 $this->curl = curl_init();
             }
+            $this->debug($url);
             curl_setopt($this->curl, CURLOPT_HEADER, 1);
             curl_setopt($this->curl, CURLOPT_URL, $url);
             curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, 1);
@@ -154,7 +157,7 @@ class ApiCommunication
         $this->debugState = $state;
     }
 
-        /**
+    /**
      *   Set the global username
      *
      *   @param string $username
