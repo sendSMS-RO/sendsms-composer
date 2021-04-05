@@ -45,9 +45,6 @@ $api->setPassword('password');
 $api->message_send('40727363767', 'This is a message', '1898');
 ```
 
-## Credits
-
-- Radu Vasile Catalin
 
 [ico-downloads]: https://img.shields.io/packagist/dt/sendsms/sendsms.svg?style=flat-square
 
