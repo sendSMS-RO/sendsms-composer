@@ -147,7 +147,7 @@ class ApiCommunication
 
     function debug($str)
     {
-        if ($this->debug) {
+        if ($this->debugState) {
             error_log('SendSMS: ' . $str);
         }
     }
